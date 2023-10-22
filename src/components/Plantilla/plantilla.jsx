@@ -29,13 +29,13 @@ const App2 = () => {
           theme="dark"
           mode="horizontal"
           className='menu'
-        >{/*
+        >
           <Menu.Item key="Home" className={location.pathname === '/' ? 'selected-menu-item' : ''}>
             <Link to="/">
               <HomeOutlined/> Home
             </Link> 
           </Menu.Item>
-          */}<SubMenu
+          <SubMenu
             title={
               <span>
                 <UnorderedListOutlined /> Platillos Tradicionales

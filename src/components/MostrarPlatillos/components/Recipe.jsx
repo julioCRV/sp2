@@ -66,8 +66,8 @@ const Recipe = () => {
 
           <div className="recipe-buttons">
             <div className='buttonn'>
-              <Button type="primary" icon={<EditOutlined />} onClick={() => console.log('Editar')}>
-              </Button>
+              {/*<Button type="primary" icon={<EditOutlined />} onClick={() => console.log('Editar')}>
+              </Button>*/}
             </div>
             <ModalConfirmation id={platilloData.identificador} nombre={platilloData.nombre} />
           </div>
