@@ -20,7 +20,7 @@ export const ModalConfirmation = ({id, nombre}) => {
       setConfirmLoading(true);
       try {
         // Realizar la solicitud fetch aquí (reemplaza la URL con tu endpoint)
-        const response = await fetch(`http://localhost:5000/eliminarPlatillo/${id}`, {
+        const response = await fetch(`http://18.116.106.247:3000/eliminarPlatillo/${id}`, {
           method: 'DELETE',
         });
   
@@ -28,7 +28,6 @@ export const ModalConfirmation = ({id, nombre}) => {
           setOpen(false);
           setConfirmLoading(false);
           await mostrarNotificacionExito();
-          window.location.reload();
         } else {
           mostrarNotificacionError("Error de conexion");
         }
@@ -50,7 +49,7 @@ export const ModalConfirmation = ({id, nombre}) => {
         message: 'Eliminación Exitosa',
         description: 'El elemento ha sido eliminado correctamente.',
         icon: <ExclamationCircleOutlined style={{ color: '#52c41a', }} />,
-        duration:1,
+        duration:2,
         style: {
           position: 'fixed',
           top: '50%',

@@ -7,11 +7,11 @@ import './Recipe.css';
 import { Button } from 'antd';
 import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import {ModalConfirmation} from '../../ModalConfirmation/ModalConfirmation';
-
+import { Link } from 'react-router-dom';
 import {Img} from 'react-image';
 
 
-const uri = 'http://localhost:5000/media/';
+const uri = 'http://18.116.106.247:3000/media/';
 
 
 const Recipe = () => {
@@ -27,7 +27,7 @@ const Recipe = () => {
 
   useEffect(() => {
     console.log('realizando llamada');
-    axios.get(`http://localhost:5000/mostrarPlatillos/page/${id}`)
+    axios.get(`http://18.116.106.247:3000/mostrarPlatillos/page/${id}`)
       .then((response) => {
         console.log(response.data.respuesta);
         const platillo = response.data.respuesta;
@@ -66,8 +66,11 @@ const Recipe = () => {
 
           <div className="recipe-buttons">
             <div className='buttonn'>
-              {/*<Button type="primary" icon={<EditOutlined />} onClick={() => console.log('Editar')}>
-              </Button>*/}
+              <Link to={`/editar-platillo/${id}`}>
+                <Button type="primary" onClick={() => console.log('Editar')}>
+                <EditOutlined />
+                </Button>
+            </Link>
             </div>
             <ModalConfirmation id={platilloData.identificador} nombre={platilloData.nombre} />
           </div>
