@@ -1,9 +1,11 @@
 import React from 'react';
+import './Home.css'
 function Home() {
     return (
-        <div>
-        <h2>¡Página en Construcción!</h2>
-        <p>Estamos trabajando en esta página y pronto estará disponible.</p>
+        <div className='div-center' >
+        <h2>Resultados de la búsqueda para:</h2>
+        <h1 className='texto'>Oops!</h1>
+        <h2>No se ha encontrado ningún platillo</h2>
       </div>
     );
 }
